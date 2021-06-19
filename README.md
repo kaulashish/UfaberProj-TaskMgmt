@@ -1,7 +1,7 @@
 # UfaberProj-TaskMgmt
 
 This is a project which was provided by Ufaber for creating a simple Task Management web application.
-This project is divided into 2 parts, where the backend is developed using Django Rest Framework and frontend in Django Templates using HTML/Css and Bootstrap( Frontend yet to be implemented).
+This project is divided into 2 parts, where the backend is developed using Django Rest Framework and frontend in Django Templates using HTML/Css and Bootstrap (Frontend yet to be implemented).
 
 ## Requirements
 - Python 3.9.0
