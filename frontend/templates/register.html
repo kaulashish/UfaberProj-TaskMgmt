@@ -1,0 +1,12 @@
+<body>
+<center>
+    <h1>Task Management</h1>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <div class="text-left">
+            <button type="submit" class="btn btn-big btn-primary" value = "upload">Register</button>
+        </div>
+    </form>
+</center>
+</body>

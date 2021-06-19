@@ -12,7 +12,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 class RegisterSerializer(serializers.ModelSerializer):
     username = serializers.CharField(required=True, validators=[UniqueValidator])
-    password = serializers.CharField(
+    password1 = serializers.CharField(
         write_only=True, required=True, validators=[validate_password]
     )
     password2 = serializers.CharField(write_only=True, required=True)
@@ -21,7 +21,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         model = User
         fields = (
             "username",
-            "password",
+            "password1",
             "password2",
             "first_name",
             "last_name",
@@ -32,7 +32,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         }
 
     def validate(self, attrs):
-        if attrs["password"] != attrs["password2"]:
+        if attrs["password1"] != attrs["password2"]:
             raise serializers.ValidationError(
                 {"password": "Password fields didn't match."}
             )
@@ -46,7 +46,7 @@ class RegisterSerializer(serializers.ModelSerializer):
             last_name=validated_data["last_name"],
         )
 
-        user.set_password(validated_data["password"])
+        user.set_password(validated_data["password1"])
         user.save()
 
         return user

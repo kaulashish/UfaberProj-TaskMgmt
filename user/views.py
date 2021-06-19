@@ -24,6 +24,7 @@ class Register(generics.CreateAPIView):
         token, created = Token.objects.get_or_create(user=serializer.instance)
         return Response(
             {
+                "detail": "Registration successfull",
                 "token": token.key,
                 "username": serializer.instance.username,
                 "first_name": serializer.instance.first_name,
@@ -37,8 +38,6 @@ class Login(APIView):
     def post(self, request):
         username = request.data.get("username")
         password = request.data.get("password")
-
-        print(username, password)
 
         if not username or not password:
             return Response(
