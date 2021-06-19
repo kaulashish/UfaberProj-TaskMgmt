@@ -8,7 +8,7 @@ This project is divided into 2 parts, where the backend is developed using Djang
 - virtualenv
 
 - Clone the project using `git clone https://github.com/kaulashish/UfaberProj-TaskMgmt/`
-- create virtual environment virtualenv <env-name> --python=python3.9.0
+- create virtual environment `virtualenv <env-name> --python=python3.9.0`
 - Install the required dependecies for the project from the requirements.txt file.
 `pip install -r requirements.txt`
 - Activate virtual environment
