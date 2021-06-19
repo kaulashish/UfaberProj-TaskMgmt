@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "c:\\myenv\\django\\My Projects\\Ufaber\\env\\Scripts\\python.exe",
+    "python.formatting.provider": "black"
+}
