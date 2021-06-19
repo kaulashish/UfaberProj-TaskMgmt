@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     "rest_framework.authtoken",
     "user",
     "project",
+    "frontend",
     "django_cleanup.apps.CleanupConfig",
 ]
 
