@@ -54,7 +54,7 @@ The backend consists of the following API's
 
 ### Task
 - #### Create Task:
-  Creates a new task. Takes name, description, start_data, end_date and assignee as input. POST method.
+  Creates a new task. Takes name, description, start_data, end_date and assignee as input. One can provide multiple assignees by just providing the same key 'assignee'. POST method.
   `localhost:8000/api/project/<int:pk>/task/create`
   
 - #### List Task:
@@ -62,7 +62,7 @@ The backend consists of the following API's
   `localhost:8000/api/project/<int:pk>/task/list`
   
 - #### Update Task:
-  Updates the task. PUT method
+  Updates the task. For assignee. If the assignee exists, it will deassign him or vice versa. PUT method
   `localhost:8000/api/project/<int:pk>/task/<int:pk>/update`
   
 - #### Delete Task:
@@ -72,7 +72,7 @@ The backend consists of the following API's
 ### Subtask
 
 - #### Create subtask:
-  Creates a new subtask for the associated task. Takes in name, description, start_date, end_date and assignee as input. The assignee must be mentioned in the task assignee. POST method.
+  Creates a new subtask for the associated task. Takes in name, description, start_date, end_date and assignee as input. The assignee must be mentioned in the task assignee. One can provide multiple assignees by just providing the same key 'assignee'. POST method.
   `localhost:8000/api/project/<int:pk>/task/<int:pk>/subtask/create`
   
 - #### List subtask:
@@ -80,7 +80,7 @@ The backend consists of the following API's
   `localhost:8000/api/project/<int:pk>/task/<int:pk>/subtask/list`
   
 - #### Update subtask:
-  Updates the subtasks. PUT method
+  Updates the subtasks. If the assignee exists, it will deassign him or vice versa. PUT method
   `localhost:8000/api/project/<int:pk>/task/<int:pk>/subtask/<int:pk>/update`
   
 - #### Delete subtask:
