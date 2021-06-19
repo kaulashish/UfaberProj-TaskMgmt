@@ -72,7 +72,9 @@ The backend consists of the following API's
 ### Subtask
 
 - #### Create subtask:
-  Creates a new subtask for the associated task. Takes in name, description, start_date, end_date and assignee as input. The assignee must be mentioned in the task assignee. One can provide multiple assignees by just providing the same key 'assignee'. POST method.
+  Creates a new subtask for the associated task. Takes in name, description, start_date, end_date and assignee as input. One can provide multiple assignees by just providing the same key 'assignee'. POST method.
+  
+  `Note`: The assignee must be mentioned in the task assignee. 
   `localhost:8000/api/project/<int:pk>/task/<int:pk>/subtask/create`
   
 - #### List subtask:
@@ -81,6 +83,7 @@ The backend consists of the following API's
   
 - #### Update subtask:
   Updates the subtasks. If the assignee exists, it will deassign him or vice versa. PUT method
+  
   `Note`: The assignee must be mentioned in the task assignee. 
   `localhost:8000/api/project/<int:pk>/task/<int:pk>/subtask/<int:pk>/update`
   
