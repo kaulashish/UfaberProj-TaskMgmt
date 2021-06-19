@@ -85,6 +85,7 @@ The backend consists of the following API's
   Updates the subtasks. If the assignee exists, it will deassign him or vice versa. PUT method
   
   `Note`: The assignee must be mentioned in the task assignee. 
+  
   `localhost:8000/api/project/<int:pk>/task/<int:pk>/subtask/<int:pk>/update`
   
 - #### Delete subtask:
